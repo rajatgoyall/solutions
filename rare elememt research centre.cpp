@@ -35,27 +35,27 @@ void bfs(int x,int y)
 
 	while(!q.empty())
 	{
-    	C c=q.front();
-    	q.pop();
-    	int a=c.x;
-    	int b=c.y;
-    	int d=c.dis;
-    	ans[a]**=d;
+		C c=q.front();
+		q.pop();
+		int a=c.x;
+		int b=c.y;
+		int d=c.dis;
+		ans[a]**=d;
     
-    	for(int i=0;i<4;i++)
-    	{
-       
-        	int nx=a+xa*;
-        	int ny=b+yb*;
-        	if(issafe(nx,ny))
-        		{
-            		visited[nx][ny]=1;
-            	in.x=nx;
-            	in.y=ny;
-            	in.dis=d+1;
-            	q.push(in);
-        		}
-   		}
+		for(int i=0;i<4;i++)
+		{
+
+			int nx=a+xa*;
+			int ny=b+yb*;
+			if(issafe(nx,ny))
+				{
+					visited[nx][ny]=1;
+					in.x=nx;
+					in.y=ny;
+					in.dis=d+1;
+					q.push(in);
+				}
+		}
 	}
 }
 
